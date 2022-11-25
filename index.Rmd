@@ -1,0 +1,340 @@
+---
+title: "INDEX"
+author: "Laetitia Onofre, Fabian Calla, Mirka Prieto"
+date: "25/11/2022"
+output:
+  tufte::tufte_html: default
+  tufte::tufte_handout: default
+---
+ <font size="7"> **PROMEDIO SALARIAL DE UN PAÍS**  </font>
+ 
+ <font size="6"> **INTRODUCCIÓN** </font>
+El presente trabajo de investigación analiza los factores que pueden impactar en el Promedio Salarial de un país. Se sostiene que los factores económicos como: Inflación, Brecha de pobreza, Salario mínimo, Indice Costo de vida  y sociales como: Tasa de Alfabetización, horas semanales,mujeres que trabajan son relevantes para esta investigación.
+
+Llamamos la data (se llamará BDfinal)
+
+ <font size="8"> Base de datos final </font>
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(rio)
+lkXLSX="https://github.com/FabianCalla/Avance-2-Trabajo-de-Investigaci-n/blob/main/BDfinal1.xlsx?raw=true"
+BDfinal=import(lkXLSX)
+```
+ 
+ <font size="8"> **REGRESIÓN LINEAL** </font>
+
+ <font size="6"> Laetitia </font>
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+modelo1 = lm(PS~ICV+INF+MT, BDfinal)
+summary(modelo1)
+```
+Interpretación: 
+
+Las variables que son significativas son la de ICV, con un 4.29e-15 e INF con 0.000312 ya que muestran resultados menores a 0.05. Además, se observa que Este modelo2 solo explica un 54%. 
+
+ <font size="6"> Mirka </font>
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+modelo2 = lm(PS~Tasa_alfabetizacion+salario_min+brecha,BDfinal)
+summary(modelo2)
+```
+Segun el p-valor, este es un modelo válido. Se explica en el 73% y exhibe dos valores que influyen significativamente sobre la dependiente. El aumento en un punto de la tasa de alfabetización, incrementa en 19.35 dolares el promedio salarial. Asimismo, El aumento en un punto del salario mínimo, aumenta en un punto el promedio salarial. 
+
+ <font size="6"> Fabián </font>
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+modelo3= lm(PS~horassemana+negocole+explotacion, BDfinal)
+summary(modelo3)
+```
+
+- El p-valor nos indica que es un modelo válido
+
+- Pero este se está explicando en un 15%
+
+- Ninguno es significativo al 0.05
+
+
+ <font size="8"> COMPARACIÓN DE LOS 3 MODELOS </font>
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(stargazer)
+library(jtools)
+stargazer(modelo1,modelo2,modelo3, type ="text")
+```
+En comparación, vemos que el modelo 2 está explicando mejor la dependiente con un 73% en el r2 ajustado. 
+
+
+Regresión con las 9 variables independientes: 
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+modelo4= lm(PS~horassemana+negocole+explotacion+Tasa_alfabetizacion+salario_min+brecha+ICV+INF+MT, BDfinal)
+summary(modelo4)
+```
+
+- El p-valor nos indica que es un modelo válido
+
+- Este se está explicando en un 75% mejor que todos los modelos anteriores
+
+- Existen 3 variables que influyen en la dependiente: 
+
+El aumento en un punto de la taza de alfabetización estaría aumentando en 21 puntos el promedio salarial, este se explca mejor con 4.59e-05 en el Pr
+
+El aumento en un punto del salario mínimo interprofesional, está aumentando en 1.70 el promedio salarial. 
+
+ <font size="8"> **ANÁLISIS FACTORIAL EXPLORATORIO** </font>
+ 
+1. Subsetear la data
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+dontselect=c("Pais", "PS", "ICV")
+select=setdiff(names(BDfinal), dontselect)
+DL=BDfinal[,select]
+```
+
+2.Cálculo matriz de correlación
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(polycor)
+corL=polycor::hetcor(DL)$correlations
+```
+
+3.Explorar correlaciones
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(ggcorrplot)
+ggcorrplot(corL)
+```
+
+Interpretación del modelo: 
+
+Al observar el gráfico, notamos que hay bloques que no presentan un alto nivel de correlación. Por ejemplo, horas de trabajo y porcentaje de mujeres que trabajan. Sin embargo, hay variables como "salario mínimo" que tienen mayor nivel de correlación en relación al resto. 
+
+4.Veremos si se puede factorizar
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(psych)
+psych::KMO(corL) 
+```
+
+El overall es 0.67 por lo cual, todavía estamos dentro del valor adecuado para un análisis factorial. 
+
+5.Ver si la matriz de correlaciones es adecuada
+
+  *Hnula: Matriz identidad
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+cortest.bartlett(corL,n=nrow(DL))$p.value>0.05
+```
+  
+  * Hnula: Matriz singular 
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(matrixcalc)
+
+is.singular.matrix(corL)
+```
+
+Vemos que ambos resultado son False por lo que podemos continuar con el trabajo
+
+6. Aquí vemos en cuántos factores se puede redimensionar la data
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+fa.parallel(DL, fa = 'fa',correct = T,plot = F)
+```
+Entonces, vemos que en este caso se sugiere 2 como número de factor (de 9, se pueden represtnar en 2). 
+
+7. Ahora redimensionamos a un menor número de factores: 
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(GPArotation)
+resL <- fa(DL,
+            nfactors = 2,
+            cor = 'mixed',
+            rotate = "varimax",
+            fm="minres")
+print(resL$loadings)
+```
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+print(resL$loadings,cutoff = 0.5)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+fa.diagram(resL,main = "Resultados del EFA")
+```
+Notamos que casi todas superan el 0.5 
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+print(resL$loadings,cutoff = 0.5)
+```
+La varianza acumulada de 0.44; esto significa que hemos recuperado el 44 de información.
+
+8. Evaluamos qué variables aportaron más a los factores
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+sort(resL$communality)
+```
+**En este caso, vemos que el que más aporta es el promedio de horas semanales** el que menos aporta INF. 
+ <font size="4"> ¿Qué variables contribuyen a más de un factor? </font>
+
+Complejidad:
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+sort(resL$complexity)
+```
+En este caso, nos quedamos con la que se encuentre más cercano al 1: salario minimo. 
+
+9. Valores proyectados (resumen)
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(magrittr)
+as.data.frame(resL$scores)%>%head()
+```
+
+
+ <font size="8"> **CONGLOMERADOS** </font>
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+dataClus = BDfinal[,c(3:9)]
+row.names(dataClus)=BDfinal$Pais
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(cluster)
+g.dist = daisy(dataClus, metric="gower")
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(ggplot2)
+library(factoextra)
+fviz_nbclust(dataClus, pam,diss=g.dist,method = "gap_stat",k.max = 10,verbose = F)
+```
+
+A pesar de que el gráfico indica que debemos hacer solo 1 cluster, se ha decidido trabajar con tres grupos para una mejor comparación. 
+
+ <font size="6"> PAM </font>
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+set.seed(123)
+res.pam=pam(g.dist,3,cluster.only = F)
+
+#nueva columna
+dataClus$pam=res.pam$cluster
+
+#ver
+head(dataClus,15)
+```
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+fviz_silhouette(res.pam,print.summary = F)
+
+```
+Veamos cuáles son los países que están mal clusterizados.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+silPAM=data.frame(res.pam$silinfo$widths)
+silPAM$country=row.names(silPAM)
+poorPAM=silPAM[silPAM$sil_width<0,'country']%>%sort()
+poorPAM
+```
+En este caso los países mal clusterizados son Mauritania y Portugal.
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+aggregate(.~ pam, data=dataClus,mean)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+BDfinal$kiwipoor=BDfinal$Pais%in%poorPAM
+BDfinal$kiwi=as.ordered(dataClus$pam)
+dataClus$pam=NULL
+```
+
+ <font size="6"> Grafica de PAM </font>
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+proyeccion = cmdscale(g.dist, k=2,add = T) 
+head(proyeccion$points,20)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+BDfinal$dim1 <- proyeccion$points[,1]
+BDfinal$dim2 <- proyeccion$points[,2]
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(ggrepel)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+# solo paises mal clusterizados
+PAMlabels=ifelse(BDfinal$kiwipoor,BDfinal$Pais,'')
+
+#base
+base= ggplot(BDfinal,aes(x=dim1, y=dim2))  +
+    scale_color_brewer(type = 'qual',palette ='Dark2'  ) + labs(subtitle = "Se destacan los países mal clusterizados")
+
+pamPlot=base + geom_point(size=3, 
+                          aes(color=kiwi))  + 
+        labs(title = "PAM") 
+# hacer notorios los paises mal clusterizados
+pamPlot + geom_text_repel(size=4,
+                          aes(label=PAMlabels),
+                          max.overlaps = 50,
+                          min.segment.length = unit(0, 'lines'))
+```
+
+ <font size="6"> MAPA MUNDIAL </font>
+ 
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+#install.packages("cowplot")
+#install.packages("googleway")
+#install.packages("ggplot2")
+#install.packages("ggrepel")
+#install.packages("ggspatial")
+#install.packages("libwgeom")
+#install.packages("sf")
+#install.packages("rnaturalearth")
+#install.packages("rnaturalearthdata")
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library("ggplot2")
+theme_set(theme_bw())
+library("sf")
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library("rnaturalearth")
+library("rnaturalearthdata")
+
+world <- ne_countries(scale = "medium", returnclass = "sf")
+class(world)
+
+#[1] "sf"  
+#[1] "data.frame"
+```
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+ggplot(data = world) +
+    geom_sf()
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+ggplot(data = world) +
+    geom_sf() +
+    xlab("Longitude") + ylab("Latitude") +
+    ggtitle("MAPA MUNDIAL", subtitle = paste0("(", length(unique(world$país)), " PAÍS)"))
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+ggplot(data = world) +
+    geom_sf(aes(fill = pop_est)) +
+    scale_fill_viridis_c(option = "plasma", trans = "sqrt")
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
