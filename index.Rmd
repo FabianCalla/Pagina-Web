@@ -34,14 +34,14 @@ Las variables que son significativas son la de ICV, con un 4.29e-15 e INF con 0.
  <font size="6"> Mirka </font>
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 modelo2 = lm(PS~Tasa_alfabetizacion+salario_min+brecha,BDfinal)
-summary(modelo2)
+#summary(modelo2)
 ```
 Segun el p-valor, este es un modelo válido. Se explica en el 73% y exhibe dos valores que influyen significativamente sobre la dependiente. El aumento en un punto de la tasa de alfabetización, incrementa en 19.35 dolares el promedio salarial. Asimismo, El aumento en un punto del salario mínimo, aumenta en un punto el promedio salarial. 
 
  <font size="6"> Fabián </font>
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 modelo3= lm(PS~horassemana+negocole+explotacion, BDfinal)
-summary(modelo3)
+#summary(modelo3)
 ```
 
 - El p-valor nos indica que es un modelo válido
