@@ -11,7 +11,7 @@ output:
  <font size="6"> **INTRODUCCIÓN** </font>
 El presente trabajo de investigación analiza los factores que pueden impactar en el Promedio Salarial de un país. Se sostiene que los factores económicos como: Inflación, Brecha de pobreza, Salario mínimo, Indice Costo de vida  y sociales como: Tasa de Alfabetización, horas semanales,mujeres que trabajan son relevantes para esta investigación.
 
-Llamamos la data (se llamará BDfinal)
+Llamamos la data (se llamará BDfinal) Hola PEPE
 
  <font size="8"> Base de datos final </font>
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
