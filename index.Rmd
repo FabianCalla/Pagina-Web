@@ -25,7 +25,7 @@ BDfinal=import(lkXLSX)
  <font size="6"> Laetitia </font>
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 modelo1 = lm(PS~ICV+INF+MT, BDfinal)
-summary(modelo1)
+#summary(modelo1)
 ```
 Interpretación: 
 
