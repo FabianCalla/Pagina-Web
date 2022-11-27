@@ -337,36 +337,8 @@ pamPlot + geom_text_repel(size=4,
 [Tratamos de demostrar en un mapa los grupos formados por países según la clusterización realizada. Sin embargo, no pudo ser posible debido a que el shapefile se encontraba en inglés y no encontramos uno en español que tenga los nombres de los países para hacer merge] 
 
 
- <font size="6"> MAPA MUNDIAL </font>
- 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-#install.packages("cowplot")
-#install.packages("googleway")
-#install.packages("ggplot2")
-#install.packages("ggrepel")
-#install.packages("ggspatial")
-#install.packages("libwgeom")
-#install.packages("sf")
-#install.packages("rnaturalearth")
-#install.packages("rnaturalearthdata")
-```
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-library("ggplot2")
-theme_set(theme_bw())
-library("sf")
-```
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-library("rnaturalearth")
-library("rnaturalearthdata")
-
-world <- ne_countries(scale = "medium", returnclass = "sf")
-class(world)
-
-#[1] "sf"  
-#[1] "data.frame"
-```
 
 Conclusiones: 
 
