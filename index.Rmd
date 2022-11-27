@@ -145,6 +145,8 @@ Interpretación del modelo:
 
 Al observar el gráfico, notamos que hay bloques que no presentan un alto nivel de correlación. Por ejemplo, horas de trabajo y porcentaje de mujeres que trabajan. 
 
+En el gráfico de correlación, "horassemanas" y "explotación" son las que están más correlacionadas. Mientras que un ahace referncia al promedio del tiempo de trabajo, la otra hace referencia a las horas trabajadas fuera de lo permtiido por la ley. 
+
 Sin embargo, hay variables como "salario mínimo" con "negociación colectiva" que tienen mayor nivel de correlación en relación al resto; esta relación, según Hayek, tendría que ver con un aumento artificial de los salarios. Aunque podemos pensar que esto sería beneficioso para la calidad de vida del trabajador, el autor señala que esto afecta al desempleo en tanto reduce las posibilidades del empleador para contratar personal a ese precio. 
 
 
@@ -338,17 +340,14 @@ pamPlot + geom_text_repel(size=4,
 
 
 
+ <font size="6"> **Conclusiones** </font>
 
-
-Conclusiones: 
-
-Al solo realizar la regresión lineal y agrupar las variables de 3 en 3, el modelo que explica más es el segundo ya que explica un 73%. Sin embargo, si realizamos una regresión con todas las variables, observamos que explica un 75%. Entonces, vemos que al incluir todas las variables, el modelo explica más
-
-El promeduo salarial del pais es una variable interesante para estudiar debido a que a través de esta se puede conocer más acerca de la vida economica y social de un país. (agregan sus partes)
-Haciendo uso de varibles independiente se ha buscado conocer cuáles son las que mana influyen en el Salario Promedio a nivel mundial, se ha logrado inferir que variables como el salario mínimo, tasa de alfabetización, mujeres que trabajan son relevantes oara que se calcule el promedio salarial de un país, 
-Asi mismo es interesante encontrar que variables como Horas semanales de trabajo y Explotación laboral son las que oarecen aportar menos en comparación a las otras varbiales trabajadas. 
-
-
+- Al solo realizar la regresión lineal y agrupar las variables de 3 en 3, el modelo que explica más es el segundo ya que explica un 73%. Sin embargo, si realizamos una regresión con todas las variables, observamos que explica un 75%. Entonces, vemos que al incluir todas las variables, el modelo explica más
+- Cuando revisamos el nivel de correlación de las variables, observamos que estas no se encuentran altamente correlacionadas ya que el gráfico nos muestra que los colores no se encuentran tan similares. Lo que tendría que suceder para que digamos que estén altamente correlacionados es que tengan tonalidades más acercadas al rojo, siendo rojo lo que muestra que existe mayor correlación. En este caso, se observa que horas trabajadas a la semana y explotación se encuentran más relacionadas. Existen otras variables que tmb se encuentran, pero a un menor nivel. Estas son salario mínimo y negociación colectiva
+- Al realizar el Análisis Factorial se observa que se sugiera que sea 2 como número de factor. Al realizar este análisis vemos que casi todas superan al 0.5 y que se ha recuperado el 44% de la información. 
+- Al realizar la clusterización, se nos recomienda hacer solo con 1 grupo. Sin embargo, elegimos hacerlo de 3 para separarlos mejor. Al hacerlo observamos que 2 países se encuentran mal clusterizados y con el gráfico final se observa esta distribución. En este caso, kiwi fue el nombre que le pusimos a lo que vendrían a ser los clusters que sugiere R.
+- Haciendo uso de varibles independiente se ha buscado conocer cuáles son las que van a influir en el Salario Promedio a nivel mundial, se ha logrado inferir que variables como el salario mínimo, tasa de alfabetización, mujeres que trabajan son relevantes para que se calcule el promedio salarial de un país, 
+- Asimismo, es interesante encontrar que variables como Horas semanales de trabajo y Explotación laboral son las que oarecen aportar menos en comparación a las otras varbiales trabajadas. 
 
 
 
