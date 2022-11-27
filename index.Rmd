@@ -6,7 +6,10 @@ output:
   tufte::tufte_html: default
   tufte::tufte_handout: default
 ---
+ 
+ 
  <font size="7"> **PROMEDIO SALARIAL DE UN PAÍS**  </font>
+ 
  
  <font size="6"> **INTRODUCCIÓN** </font>
  
@@ -39,7 +42,9 @@ lkXLSX="https://github.com/FabianCalla/Avance-2-Trabajo-de-Investigaci-n/blob/ma
 BDfinal=import(lkXLSX)
 ```
  
+
  <font size="8"> **REGRESIÓN LINEAL** </font>
+ 
 
  <font size="6"> Indice de Costo de Vida, Inflación y Participación de las mujeres en el trabajo </font>
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
@@ -69,7 +74,7 @@ Nos interesa anotar que un indicador relacionado con la educación (alfabetizaci
 
 Sabemos que la produción actual se sostiene con un alto grado de división del trabajo. Para Marx, este concepto tenía mucha importancia para el análisis del modo de producción capitalista. El autor señalaba que la división del trabajo conduce dentro de las naciones a la separación del trabajo industrial y del campo, separación ciudad/campo y a la oposición de sus intereses. 
 
-El desarrollo ulterior lleva a la separación del trabajo industrial del comercial. Además, la división del trabajo trae consigo la creación de distintas secciones determinadas por la rama en la que trabajan y cuya posición respecto a otras depende de la manera en cómo se da el trabajo industrial, comercial y agrícola (estamentos, clases, esclavitud) (Marx y Engels 1845: 41). En consecuencia, “las relaciones personales se convierten necesariamente en relaciones de clase y se fijan como tales” (Marx y Engels 1845: 42). En esa separación de la calidad y trabajo de la mano obrera, la mano de obra calificada estaría ganando más que la fuerza de trabajo bruta del proletario carente de educación. Para Hyek, esta diferencia se explicaría por la competencia en el mercado. Para Marx, esta diferencia es consecuencia de la división del trabajo y la consecuente especialización que se requiere y escasea en relación a la masa no educada, personas que solo ccuentan con sus brazos y su fuerza para vender.  
+El desarrollo ulterior lleva a la separación del trabajo industrial del comercial. Además, la división del trabajo trae consigo la creación de distintas secciones determinadas por la rama en la que trabajan y cuya posición respecto a otras depende de la manera en cómo se da el trabajo industrial, comercial y agrícola (estamentos, clases, esclavitud) (Marx y Engels 1845: 41). En consecuencia, “las relaciones personales se convierten necesariamente en relaciones de clase y se fijan como tales” (Marx y Engels 1845: 42). En esa separación de la calidad y trabajo de la mano obrera, la mano de obra calificada estaría ganando más que la fuerza de trabajo bruta del proletario carente de educación. Para Hyek, esta diferencia se explicaría por la competencia en el mercado. Para Marx, esta diferencia es consecuencia de la división del trabajo y la consecuente especialización que se requiere y escasea en relación a la masa no educada, personas que solo cuentan con sus brazos y su fuerza para vender.  
 
 
  <font size="6"> Promedio de horas semanales, Convenios colectivos, Trabajo mayor a las 8 horas diarias </font>
@@ -117,20 +122,20 @@ Nos interesa anotar la persistencia de la educación en su influencia sobre el s
 
  <font size="8"> **ANÁLISIS FACTORIAL EXPLORATORIO** </font>
  
-1. Subsetear la data
+
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 dontselect=c("Pais", "PS", "ICV")
 select=setdiff(names(BDfinal), dontselect)
 DL=BDfinal[,select]
 ```
 
-2.Cálculo matriz de correlación
+- Calculamos la matriz de correlación:
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 library(polycor)
 corL=polycor::hetcor(DL)$correlations
 ```
 
-3.Explorar correlaciones
+
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 library(ggcorrplot)
 ggcorrplot(corL)
@@ -143,8 +148,7 @@ Al observar el gráfico, notamos que hay bloques que no presentan un alto nivel 
 Sin embargo, hay variables como "salario mínimo" con "negociación colectiva" que tienen mayor nivel de correlación en relación al resto; esta relación, según Hayek, tendría que ver con un aumento artificial de los salarios. Aunque podemos pensar que esto sería beneficioso para la calidad de vida del trabajador, el autor señala que esto afecta al desempleo en tanto reduce las posibilidades del empleador para contratar personal a ese precio. 
 
 
-
-4.Veremos si se puede factorizar
+- Veremos si se puede factorizar
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 library(psych)
 psych::KMO(corL) 
@@ -152,14 +156,14 @@ psych::KMO(corL)
 
 El overall es 0.67 por lo cual, todavía estamos dentro del valor adecuado para un análisis factorial. 
 
-5.Ver si la matriz de correlaciones es adecuada
+- Vemos si la matriz de correlaciones es adecuada
 
-  *Hnula: Matriz identidad
+  *Calculamos la Matriz identidad
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 cortest.bartlett(corL,n=nrow(DL))$p.value>0.05
 ```
   
-  * Hnula: Matriz singular 
+  * Calculamos la Matriz singular 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 library(matrixcalc)
 
@@ -168,13 +172,13 @@ is.singular.matrix(corL)
 
 Vemos que ambos resultado son False por lo que podemos continuar con el trabajo
 
-6. Aquí vemos en cuántos factores se puede redimensionar la data
+- Aquí vemos en cuántos factores se puede redimensionar la data
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 fa.parallel(DL, fa = 'fa',correct = T,plot = F)
 ```
 Entonces, vemos que en este caso se sugiere 2 como número de factor (de 9, se pueden represtnar en 2). 
 
-7. Ahora redimensionamos a un menor número de factores: 
+- Ahora redimensionamos a un menor número de factores: 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 library(GPArotation)
 resL <- fa(DL,
@@ -206,7 +210,7 @@ print(resL$loadings,cutoff = 0.5)
 ```
 La varianza acumulada de 0.44; esto significa que hemos recuperado el 44% de información. Todo proceso de síntesis pierde información, pero se queda con lo importante. 
 
-8. Evaluamos qué variables aportaron más a los factores
+- Evaluamos qué variables aportaron más a los factores
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 sort(resL$communality)
@@ -219,10 +223,16 @@ Complejidad:
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 sort(resL$complexity)
+library(kableExtra)
+dt <- resL$complexity[1:8]
+dt %>%
+  kbl(caption = "Complejidad") %>%
+  kable_classic(full_width = F, html_font = "Cambria")
 ```
+
 En este caso, nos quedamos con la que se encuentre más cercano al 1: salario minimo. Esta variable estaría más cercano al segundo factor: Trabajo de mujeres y brecha de porbeza.
 
-9. Valores proyectados (resumen)
+- Valores proyectados (resumen)
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 library(magrittr)
 as.data.frame(resL$scores)%>%head()
@@ -347,6 +357,7 @@ class(world)
 #[1] "sf"  
 #[1] "data.frame"
 ```
+
 
 
 
