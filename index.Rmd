@@ -212,6 +212,8 @@ La varianza acumulada de 0.44; esto significa que hemos recuperado el 44% de inf
 
 - Evaluamos qué variables aportaron más a los factores
 
+Comunalidad:
+
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 sort(resL$communality)
 library(kableExtra)
@@ -222,7 +224,7 @@ dt %>%
 ```
 **En este caso, vemos que el que más aporta es el promedio de horas semanales** el que menos aporta es inflación. 
 
- <font size="4"> ¿Qué variables contribuyen a más de un factor? </font>
+- ¿Qué variables contribuyen a más de un factor? 
 
 Complejidad:
 
@@ -332,6 +334,9 @@ pamPlot + geom_text_repel(size=4,
                           min.segment.length = unit(0, 'lines'))
 ```
 
+[Tratamos de demostrar en un mapa los grupos formados por países según la clusterización realizada. Sin embargo, no pudo ser posible debido a que el shapefile se encontraba en inglés y no encontramos uno en español que tenga los nombres de los países para hacer merge] 
+
+
  <font size="6"> MAPA MUNDIAL </font>
  
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
@@ -367,7 +372,7 @@ Conclusiones:
 
 Al solo realizar la regresión lineal y agrupar las variables de 3 en 3, el modelo que explica más es el segundo ya que explica un 73%. Sin embargo, si realizamos una regresión con todas las variables, observamos que explica un 75%. Entonces, vemos que al incluir todas las variables, el modelo explica más
 
-Asi mismo es interesante encontrar que variables como Horas semanales de trabajo y Explotación laboral son las que oarecen aportar menos en comparación a las otras varbiales trabajadas (pones floro de capitalismo)
+Asi mismo es interesante encontrar que variables como Horas semanales de trabajo y Explotación laboral son las que parecen aportar menos en comparación a las otras varbiales trabajadas. 
 
 
 
