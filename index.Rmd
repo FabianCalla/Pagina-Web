@@ -214,6 +214,11 @@ La varianza acumulada de 0.44; esto significa que hemos recuperado el 44% de inf
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 sort(resL$communality)
+library(kableExtra)
+dt <- resL$communality[1:8]
+dt %>%
+  kbl(caption = "Evaluación de variables que aportan más al modelo") %>%
+  kable_classic(full_width = F, html_font = "Cambria")
 ```
 **En este caso, vemos que el que más aporta es el promedio de horas semanales** el que menos aporta es inflación. 
 
@@ -358,7 +363,11 @@ class(world)
 #[1] "data.frame"
 ```
 
+Conclusiones: 
 
+Al solo realizar la regresión lineal y agrupar las variables de 3 en 3, el modelo que explica más es el segundo ya que explica un 73%. Sin embargo, si realizamos una regresión con todas las variables, observamos que explica un 75%. Entonces, vemos que al incluir todas las variables, el modelo explica más
+
+Asi mismo es interesante encontrar que variables como Horas semanales de trabajo y Explotación laboral son las que oarecen aportar menos en comparación a las otras varbiales trabajadas (pones floro de capitalismo)
 
 
 
