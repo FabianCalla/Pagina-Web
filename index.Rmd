@@ -39,33 +39,39 @@ BDfinal=import(lkXLSX)
  
  <font size="8"> **REGRESIÓN LINEAL** </font>
 
- <font size="6"> Laetitia </font>
+ <font size="6"> Indice de Costo de Vida, inflación y participación de las mujeres en el trabajo </font>
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 modelo1 = lm(PS~ICV+INF+MT, BDfinal)
 summary(modelo1)
 ```
 Interpretación: 
 
-Las variables que son significativas son la de ICV, con un 4.29e-15 e INF con 0.000312 ya que muestran resultados menores a 0.05. Además, se observa que Este modelo2 solo explica un 54%. 
+Las variables que son significativas son la del Indice de Costo de Vida (ICV) y la Inflación (INF) ya que muestran resultados menores a 0.05. Es decir, es muy poco probable que no tengan efecto sobre la dependiente. Además, se observa que la varianza explicada es del 54%. 
 
- <font size="6"> Mirka </font>
+Nos interesa anotar que el Indice de Costo de Vida está afectando al promedio salarial en tanto que el aumento en un punto del ICV aumenta en 20.662 dólares el promedio. Esto está relacionado con la necesidad de asegurar la supervivencia del trabajador y la venta de su trabajo. 
+
+
+ <font size="6"> Taza de alfabetización, Salario mínimo y Porcentaje de brecha de pobreza </font>
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 modelo2 = lm(PS~Tasa_alfabetizacion+salario_min+brecha,BDfinal)
 summary(modelo2)
 ```
+Interpretación:
+
 Segun el p-valor, este es un modelo válido. Se explica en el 73% y exhibe dos valores que influyen significativamente sobre la dependiente. El aumento en un punto de la tasa de alfabetización, incrementa en 19.35 dolares el promedio salarial. Asimismo, El aumento en un punto del salario mínimo, aumenta en un punto el promedio salarial. 
 
- <font size="6"> Fabián </font>
+Nos interesa anotar que un indicador relacionado con la educación está incrementnado en 19.35 dolares el promedio salarial. Esto podría estar relacionado con la mano de obra especializada, la cual puede estar incrementando el costo de mano de obra pero, al mismo tiempo, incrementando las desigualdades sociales pues ese aumento se da solo en esas personas. 
+
+ <font size="6"> Promedio de horas semanales, Convenios colectivos, trabajo mayor a las 8 horas diarias </font>
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 modelo3= lm(PS~horassemana+negocole+explotacion, BDfinal)
-#summary(modelo3)
+summary(modelo3)
 ```
 
-- El p-valor nos indica que es un modelo válido
+Interpretación: 
 
-- Pero este se está explicando en un 15%
+El p-valor nos indica que es un modelo válido, pero este se está explicando en un 15%. Ninguno es significativo al 0.05. 
 
-- Ninguno es significativo al 0.05
 
 
  <font size="8"> COMPARACIÓN DE LOS 3 MODELOS </font>
@@ -74,7 +80,7 @@ library(stargazer)
 library(jtools)
 stargazer(modelo1,modelo2,modelo3, type ="text")
 ```
-En comparación, vemos que el modelo 2 está explicando mejor la dependiente con un 73% en el r2 ajustado. 
+En comparación, vemos que el modelo 2 está explicando mejor la dependiente con un 73% de varianza explciada en el r2 ajustado. 
 
 
 Regresión con las 9 variables independientes: 
@@ -88,11 +94,14 @@ summary(modelo4)
 
 - Este se está explicando en un 75% mejor que todos los modelos anteriores
 
-- Existen 3 variables que influyen en la dependiente: 
+- Existen 3 variables que influyen en la dependiente, pero solo dos son significativas al 0.05%. 
 
 El aumento en un punto de la taza de alfabetización estaría aumentando en 21 puntos el promedio salarial, este se explca mejor con 4.59e-05 en el Pr
 
 El aumento en un punto del salario mínimo interprofesional, está aumentando en 1.70 el promedio salarial. 
+
+Vemos que el ICV pierde significancia
+
 
  <font size="8"> **ANÁLISIS FACTORIAL EXPLORATORIO** </font>
  
@@ -170,17 +179,24 @@ fa.diagram(resL,main = "Resultados del EFA")
 ```
 Notamos que casi todas superan el 0.5 
 
+El salario mínimo, la tasa de alfabetización y la negociación colectiva están relacionadas. Estas variables tienen que ver con la educación y la capacidad de organización de los trabajadores. 
+
+Por otro lado, la brecha de pobreza y trabajo de la mujer pueden relacionarse con el hecho que se trata de variables relacionadas con desigualdades sociales estructurales e históricas en los que media la amrginación y las oportunidades laborales desiguales. 
+
+
+
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 print(resL$loadings,cutoff = 0.5)
 ```
-La varianza acumulada de 0.44; esto significa que hemos recuperado el 44 de información.
+La varianza acumulada de 0.44; esto significa que hemos recuperado el 44% de información. Todo proceso de síntesis pierde información, pero se queda con lo importante. 
 
 8. Evaluamos qué variables aportaron más a los factores
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 sort(resL$communality)
 ```
-**En este caso, vemos que el que más aporta es el promedio de horas semanales** el que menos aporta INF. 
+**En este caso, vemos que el que más aporta es el promedio de horas semanales** el que menos aporta es inflación. 
+
  <font size="4"> ¿Qué variables contribuyen a más de un factor? </font>
 
 Complejidad:
@@ -188,7 +204,7 @@ Complejidad:
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 sort(resL$complexity)
 ```
-En este caso, nos quedamos con la que se encuentre más cercano al 1: salario minimo. 
+En este caso, nos quedamos con la que se encuentre más cercano al 1: salario minimo. Esta variable estaría más cercano al segundo factor: Trabajo de mujeres y brecha de porbeza.
 
 9. Valores proyectados (resumen)
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
@@ -241,6 +257,7 @@ poorPAM=silPAM[silPAM$sil_width<0,'country']%>%sort()
 poorPAM
 ```
 En este caso los países mal clusterizados son Mauritania y Portugal.
+
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 aggregate(.~ pam, data=dataClus,mean)
 ```
@@ -314,39 +331,12 @@ class(world)
 #[1] "sf"  
 #[1] "data.frame"
 ```
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-ggplot(data = world) +
-    geom_sf()
-```
-
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-ggplot(data = world) +
-    geom_sf() +
-    xlab("Longitude") + ylab("Latitude") +
-    ggtitle("MAPA MUNDIAL", subtitle = paste0("(", length(unique(world$país)), " PAÍS)"))
-```
-
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-ggplot(data = world) +
-    geom_sf(aes(fill = pop_est)) +
-    scale_fill_viridis_c(option = "plasma", trans = "sqrt")
-```
-
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-
-```
 
 
 
 
 
 
-title: "INDEX"
-author: "Laetitia Onofre, Fabian Calla, Mirka Prieto"
-date: "25/11/2022"
-output:
-  tufte::tufte_html: default
-  tufte::tufte_handout: default
 
 
 
