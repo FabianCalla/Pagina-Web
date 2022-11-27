@@ -12,23 +12,25 @@ output:
  
 El presente trabajo de investigación analiza los factores que pueden impactar en el promedio salarial de un país. 
 
-Existen diferentes corrientes en el pensamiento económico que difieren sobre cómo interpretar la naturaleza del salario. En primer lugar, Hayek -uno de los principales exponentes de la escuela austríaca- defendía la libertad del mercado por sobre la intervención del Estado en la economía. Esta reacción se enmarca en el contexto del auge, pero también del cuestionamiento, de la eficacia del Estado de bienestar que había proliferado en la Europa del siglo XX. Para el autor, la intervención del Estado es perjudicial para el desarrollo de la economía. 
+Existen diferentes corrientes en el pensamiento económico que difieren sobre cómo interpretar la naturaleza del salario. En primer lugar, Hayek -uno de los principales exponentes de la escuela austríaca- defendía la libertad del mercado por sobre la intervención del Estado en la economía. Esta reacción se enmarca en el contexto posterior al auge, pero también del cuestionamiento, de la eficacia del Estado de bienestar que había proliferado en la Europa del siglo XX. Para el autor, la intervención del Estado es perjudicial para el desarrollo de la economía. 
 
-En ese sentido, para Hayek, la determinación de los salarios por medios externos a los definidos dentro del mercado, es una resolución injusta y perjudicial al crecimiento económico al ser de tipo redistributivo y no impersonal (Gamonal 2016:298). Así, Hayek señalaba que "en el mundo real nadie puede saber dónde se necesita a las personas, sino sólo el mercado, que absorbe y dirige las miríadas de informaciones que poseen todos los que compran y venden en él. Y lo que precisamente hace tolerable su decisión es que no sea la opinión de una persona (como un ministro o comisario), o de un grupo de hombres identificables (como un gabinete o un politburó), sino que se deriva de unas señales impersonales dentro de un proceso que ningún individuo ni grupo puede dirigir (Hayek 2009:91). En ese sentido, es el mercado quien debería determinar los salarios por medio de la ley de oferta y demanda dentro de los ciclos productivos de la economía. 
+En ese sentido, para Hayek, la determinación de los salarios por medios externos a los definidos dentro del mercado, es una resolución injusta y perjudicial al crecimiento económico al ser de tipo redistributivo y no impersonal (Gamonal 2016:298). Así, Hayek señalaba que "en el mundo real nadie puede saber dónde se necesita a las personas, sino sólo el mercado, que absorbe y dirige las miríadas de informaciones que poseen todos los que compran y venden en él. Y lo que precisamente hace tolerable su decisión es que no sea la opinión de una persona (como un ministro o comisario), o de un grupo de hombres identificables (como un gabinete o un politburó), sino que se deriva de unas señales impersonales dentro de un proceso que ningún individuo ni grupo puede dirigir" (Hayek 2009:91). En ese sentido, es el mercado quien debería determinar los salarios por medio de la ley de oferta y demanda dentro de los ciclos productivos de la economía. 
 
-Finalmente, el autor reconoce a los sindicatos como un factor que incrementa artificialmente los salarios junto con el desempleo y la inflación. Para Hayek, aquellos usan la "fuerza y la violencia para impedir que otra gente trabaje en los términos que trabajan" (Hayek 1985). La baja en los salarios debe verse como una consecuencia de la dismunición de demanda de personal (o el incremento artificial insostenible que provocan los sindicatos), pero como algo normal en los ciclos productivos. En ese sentido, la situación de los obreros parados "sólo puede ser remediada eficazmente reorientando a los obreros a trabajos en los que puedan ser empleados duraderamente. En una sociedad libre, esta reorientación exige que los salarios relativos cambien para hacer menos atractiva las perspectivas en ocupaciones o industrias cuya mano de obra sea excesiva y, más atractivas, donde esté aumentando la demanda de mano de obra" (Hayek 2009:94).Esta solución es posible en una sociedad en la que los obreros son libres de escoger su trabajo pero son los incentivos económicos los que orientan esta dinámica, no la planificación estatal. 
+Finalmente, el autor reconoce a los sindicatos como un factor que incrementa artificialmente los salarios junto con el desempleo y la inflación. Para Hayek, aquellos usan la "fuerza y la violencia para impedir que otra gente trabaje en los términos que trabajan" (Hayek 1985). La baja en los salarios debe verse como una consecuencia de la dismunición de demanda de personal (o el incremento artificial insostenible que provocan los sindicatos), pero como algo normal en los ciclos productivos. 
 
-Sin embargo, la perspectiva sobre los salarios cambia si es que nos acercamos a los postulados de la teoría crítica del pensamiento económico clásico. En ese sentido, Marx entiende a los salarios como "la parte de la mercancía ya existente, con la que el capitalista compra una determinada cantidad de fuerza de trabajo productiva [...] La fuerza de trabajo es, pues, una mercancía que su propietario, el obrero asalariado, vende al capital. ¿Para qué la vende? Para vivir" (Marx 1849:3). El salario no sería el resultado de la oferta y la demanda sobre el precio del trabajo del trabajador, sino la mercancía que el capitalista intercambia con el trabajador. Este intercambio es formalmente libre en tanto es el trabajador quien pone a la venta su fuerza de trabajo. Sin embargo, la libertad formal termina en tanto la obligación surge de la necesidad de vivir del obrero, situacion relacionada con la acumulación originaria: el obrero no es dueño de los medios de producción a partir de un proceso histórico violento de arrebato de tierras y marginación social. 
+En ese sentido, la situación de los obreros parados "sólo puede ser remediada eficazmente reorientando a los obreros a trabajos en los que puedan ser empleados duraderamente. En una sociedad libre, esta reorientación exige que los salarios relativos cambien para hacer menos atractiva las perspectivas en ocupaciones o industrias cuya mano de obra sea excesiva y, más atractivas, donde esté aumentando la demanda de mano de obra" (Hayek 2009:94).Esta solución es posible en una sociedad en la que los obreros son libres de escoger su trabajo. Son los incentivos económicos los que orientan esta dinámica, no la planificación estatal. 
 
-Por ello, para Marx, la variación en los salarios no depende en última instancia de una ley estática y ahistórica como la oferta y la demanda de forma mecánica. Se trata de un intercambio forzoso de mercancías no equivalentes entre sí. La relación laboral capitalista implica el pago por la fuerza de trabajo y la entrega del trabajador (como cualquier otra mercancía), pero la mercancía que entrega el trabajador difiere cualitativamente de cualquier otra en tanto es la única mercancía que puede crear algo nuevo. Sin embargo, eso "nuevo", junto con la inteligencia y la creatividad del trabajador, no le pertenece. En tanto conforma una nueva mercancía, esta pasa a dominarlo en tanto otros trabajadores deben consumir el resultado del primer trabajo para sobrevivir. 
+Sin embargo, la perspectiva sobre los salarios cambia si es que nos acercamos a los postulados de la teoría crítica del pensamiento económico clásico. En ese sentido, Marx entiende a los salarios como "la parte de la mercancía ya existente, con la que el capitalista compra una determinada cantidad de fuerza de trabajo productiva [...] La fuerza de trabajo es, pues, una mercancía que su propietario, el obrero asalariado, vende al capital. ¿Para qué la vende? Para vivir" (Marx 1849:3). El salario no sería el resultado de la oferta y la demanda sobre el precio del trabajo del trabajador, sino la mercancía que el capitalista intercambia con el trabajador. Este intercambio es formalmente libre en tanto es el trabajador quien pone a la venta su fuerza de trabajo. Sin embargo, la libertad formal termina en tanto la obligación surge de la necesidad de vivir del obrero, situacion relacionada con la acumulación originaria: el obrero no es dueño de los medios de producción a partir de un proceso histórico violento de arrebato de tierras, medios de vida y marginación social. 
 
-Esto tiene una última implicancia, el trabajador debe recibir lo necesario para poder consumir las mercancías que otros trabajadores producen para vivir, pero más importante aún, para vovler a trabajar al día siguiente y no dejar de hacerlo. 
+Por ello, para Marx, la variación en los salarios no depende en última instancia de una ley estática, ahistórica y neutral como la oferta y la demanda de forma mecánica. Se trata de un intercambio forzoso de mercancías no equivalentes entre sí. La relación laboral capitalista implica el pago por la fuerza de trabajo y la entrega del trabajador (como cualquier otra mercancía), pero la mercancía que entrega el trabajador difiere cualitativamente de cualquier otra en tanto es la única mercancía que puede crear algo nuevo. Sin embargo, eso "nuevo", junto con la inteligencia y la creatividad del trabajador, no le pertenece. En tanto conforma una nueva mercancía, esta pasa a dominarlo en tanto otros trabajadores deben consumir el resultado del primer trabajo para sobrevivir. 
+
+Esto tiene una última implicancia, el trabajador debe recibir lo necesario para poder consumir las mercancías que otros trabajadores producen para vivir, pero más importante aún, para vovler a trabajar al día siguiente. 
 
 Los límites de ambas perspectivas económcias pueden encontrarse en su aplicación en el ambito geográfico en el que se aplican. Hayek escribía muchas veces desde la realidad anglosajona europea. En ella, se desarrolló un Estado de bienestar que gozó por mucho tiempo de popularidad y resutlados aceptables para su población, pero que decae en buena medida por factores externos como la crisis del petróleo. Tal situación no se ha dado en América Latina y hoy los sindicatos tienen poco peso en el ámbito político. Al mismo tiempo, existen países como Perú que tienen una economía informal mucho más grande que la formal y en la que la ausencia del Estado no ha traído el progreso que las teorías más cercanas a la libertad empresarial auguraron. 
 
-Por su lado, Marx encontró su limite al dejar de lado las realidades de los países menos industrializados y de mayor peso campesino. Además, si bien Marx y Engels acusaron la desigualdad interna dentro del propio proletariado en términos de género y el impacto sobre las muejres, su desarollo teórico quedó en deuda pues no conforma una variable igual de profunda en su teoría. 
+Por su lado, Marx encontró su límite al dejar de lado las realidades de los países menos industrializados y de mayor peso campesino. Si bien Marx y Engels acusaron la desigualdad interna dentro del propio proletariado en términos de género y el impacto sobre las muejres, su desarollo teórico quedó en deuda pues no conforma una variable con un desarrollo igual de profundo en su teoría. 
 
-Por ello, exploramos distintos datos en países alrededor del mundo para acercarnos a la presición sobre la naturaleza real del salario. Se sostiene que los factores económicos y sociales como inflación, brecha de pobreza; salario mínimo; indice costo de vida; la tasa de Alfabetización, el promedio de horas semanales y mujeres que trabajan, son relevantes para esta investigación. 
+Por ello, exploramos distintos datos en países alrededor del mundo para acercarnos a la presición sobre la naturaleza real del salario. Se sostiene que los factores económicos y sociales como inflación, brecha de pobreza; salario mínimo; indice costo de vida; la tasa de Alfabetización, el promedio de horas semanales y las mujeres que trabajan, son relevantes para esta investigación. 
 
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
@@ -39,7 +41,7 @@ BDfinal=import(lkXLSX)
  
  <font size="8"> **REGRESIÓN LINEAL** </font>
 
- <font size="6"> Indice de Costo de Vida, inflación y participación de las mujeres en el trabajo </font>
+ <font size="6"> Indice de Costo de Vida, Inflación y Participación de las mujeres en el trabajo </font>
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 modelo1 = lm(PS~ICV+INF+MT, BDfinal)
 summary(modelo1)
@@ -50,6 +52,9 @@ Las variables que son significativas son la del Indice de Costo de Vida (ICV) y 
 
 Nos interesa anotar que el Indice de Costo de Vida está afectando al promedio salarial en tanto que el aumento en un punto del ICV aumenta en 20.662 dólares el promedio. Esto está relacionado con la necesidad de asegurar la supervivencia del trabajador y la venta de su trabajo. 
 
+Vemos que el salario podría estar aumentando a razón de las necesidades de supervivencia del trabajador y no tanto a razón del valor de su fuerza de trabajo en sí misma. La oferta y demanda de trabajo estaría perdiendo peso en esta explicación en tanto otro factor del mercado (ICV e inflación) inciden en el salario percibido.  
+
+
 
  <font size="6"> Taza de alfabetización, Salario mínimo y Porcentaje de brecha de pobreza </font>
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
@@ -58,11 +63,16 @@ summary(modelo2)
 ```
 Interpretación:
 
-Segun el p-valor, este es un modelo válido. Se explica en el 73% y exhibe dos valores que influyen significativamente sobre la dependiente. El aumento en un punto de la tasa de alfabetización, incrementa en 19.35 dolares el promedio salarial. Asimismo, El aumento en un punto del salario mínimo, aumenta en un punto el promedio salarial. 
+Segun el p-valor, este es un modelo válido. Se explica en el 73% y exhibe dos valores que influyen significativamente sobre la dependiente. El aumento en un punto de la tasa de alfabetización, incrementa en 19.35 dolares el promedio salarial. Asimismo, el aumento en un punto del salario mínimo, aumenta en un punto el promedio salarial. 
 
-Nos interesa anotar que un indicador relacionado con la educación está incrementnado en 19.35 dolares el promedio salarial. Esto podría estar relacionado con la mano de obra especializada, la cual puede estar incrementando el costo de mano de obra pero, al mismo tiempo, incrementando las desigualdades sociales pues ese aumento se da solo en esas personas. 
+Nos interesa anotar que un indicador relacionado con la educación (alfabetización) está incrementnado en 19.35 dolares el promedio salarial. Esto podría estar relacionado con la mano de obra especializada, la cual puede estar incrementando el costo de mano de obra pero, al mismo tiempo, incrementando las desigualdades sociales pues ese aumento se da solo en esas personas. 
 
- <font size="6"> Promedio de horas semanales, Convenios colectivos, trabajo mayor a las 8 horas diarias </font>
+Sabemos que la produción actual se sostiene con un alto grado de división del trabajo. Para Marx, este concepto tenía mucha importancia para el análisis del modo de producción capitalista. El autor señalaba que la división del trabajo conduce dentro de las naciones a la separación del trabajo industrial y del campo, separación ciudad/campo y a la oposición de sus intereses. 
+
+El desarrollo ulterior lleva a la separación del trabajo industrial del comercial. Además, la división del trabajo trae consigo la creación de distintas secciones determinadas por la rama en la que trabajan y cuya posición respecto a otras depende de la manera en cómo se da el trabajo industrial, comercial y agrícola (estamentos, clases, esclavitud) (Marx y Engels 1845: 41). En consecuencia, “las relaciones personales se convierten necesariamente en relaciones de clase y se fijan como tales” (Marx y Engels 1845: 42). En esa separación de la calidad y trabajo de la mano obrera, la mano de obra calificada estaría ganando más que la fuerza de trabajo bruta del proletario carente de educación. Para Hyek, esta diferencia se explicaría por la competencia en el mercado. Para Marx, esta diferencia es consecuencia de la división del trabajo y la consecuente especialización que se requiere y escasea en relación a la masa no educada, personas que solo ccuentan con sus brazos y su fuerza para vender.  
+
+
+ <font size="6"> Promedio de horas semanales, Convenios colectivos, Trabajo mayor a las 8 horas diarias </font>
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 modelo3= lm(PS~horassemana+negocole+explotacion, BDfinal)
 summary(modelo3)
@@ -96,11 +106,13 @@ summary(modelo4)
 
 - Existen 3 variables que influyen en la dependiente, pero solo dos son significativas al 0.05%. 
 
-El aumento en un punto de la taza de alfabetización estaría aumentando en 21 puntos el promedio salarial, este se explca mejor con 4.59e-05 en el Pr
+- El aumento en un punto de la taza de alfabetización estaría aumentando en 21 puntos el promedio salarial, este se explca mejor con 4.59e-05 en el Pr
 
-El aumento en un punto del salario mínimo interprofesional, está aumentando en 1.70 el promedio salarial. 
+- El aumento en un punto del salario mínimo interprofesional, está aumentando en 1.70 el promedio salarial. 
 
-Vemos que el ICV pierde significancia
+- Vemos que el ICV pierde significancia
+
+Nos interesa anotar la persistencia de la educación en su influencia sobre el salario. Mientras que para Hayek esto sería resultado de la libre competencia entre trabajadores. Para Marx, esta diferencia se explica por la división del trabajo que requiere de ambos tipos de mano de obra, creando una separación dentro de la propia clase sustentada por su posición en la estrutura productiva. Se trata de la división del trabajo manual e intelectual que trae consigo la reprducción de desigualdades sociales. 
 
 
  <font size="8"> **ANÁLISIS FACTORIAL EXPLORATORIO** </font>
@@ -126,7 +138,11 @@ ggcorrplot(corL)
 
 Interpretación del modelo: 
 
-Al observar el gráfico, notamos que hay bloques que no presentan un alto nivel de correlación. Por ejemplo, horas de trabajo y porcentaje de mujeres que trabajan. Sin embargo, hay variables como "salario mínimo" que tienen mayor nivel de correlación en relación al resto. 
+Al observar el gráfico, notamos que hay bloques que no presentan un alto nivel de correlación. Por ejemplo, horas de trabajo y porcentaje de mujeres que trabajan. 
+
+Sin embargo, hay variables como "salario mínimo" con "negociación colectiva" que tienen mayor nivel de correlación en relación al resto; esta relación, según Hayek, tendría que ver con un aumento artificial de los salarios. Aunque podemos pensar que esto sería beneficioso para la calidad de vida del trabajador, el autor señala que esto afecta al desempleo en tanto reduce las posibilidades del empleador para contratar personal a ese precio. 
+
+
 
 4.Veremos si se puede factorizar
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
